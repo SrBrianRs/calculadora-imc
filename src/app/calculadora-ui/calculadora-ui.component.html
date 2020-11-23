@@ -1,1 +1,32 @@
-<p>calculadora-ui works!</p>
+
+<div class="calculadora">
+
+  <h1>Calculadora de IMC</h1>
+
+  <form action="">
+
+    <input type="radio" name="sexo" id="sexo" value="hombre"  [(ngModel)]="sexo">Hombre
+    <input type="radio" name="sexo" id="sexo" value="mujer"  [(ngModel)]="sexo">Mujer
+    <br>
+
+    <label for="edad">Edad</label>
+    <input type="text" id="edad" name="edad" [(ngModel)]="edad">
+    <br>
+
+    <label for="altura">Altura</label>
+    <input type="text" id="altura" name="altura" [(ngModel)]="altura">
+    <label for=""> m</label>
+    <br>
+
+    <label for="peso">Peso</label>
+    <input type="text" id="peso" name="peso" [(ngModel)]="peso">
+    <label for=""> kg</label>
+    <br>
+
+    <button value="Calcular" (click)="calcularImc()">Calcular</button>
+  </form>
+
+  <h2>Resultado</h2>
+  <p id="resultado">{{ imc }}</p>
+  <p id="diagnostico"> {{ diagnostico }} </p>
+</div>
