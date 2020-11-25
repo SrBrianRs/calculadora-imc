@@ -1,0 +1,61 @@
+
+<div class="calculadora">
+
+  <h1>Calculadora de IMC</h1>
+
+  <form action="">
+
+    <input type="radio" name="sexo" id="hombre" value="hombre"  [(ngModel)]="sexo">Hombre
+    <input type="radio" name="sexo" id="mujer" value="mujer"  [(ngModel)]="sexo">Mujer
+    <br>
+    <br>
+
+    <label for="edad">Edad    </label>
+    <input type="text" id="edad" name="edad" [(ngModel)]="edad">
+    <br>
+    <br>
+
+    <label for="altura">Altura    </label>
+    <input type="text" id="altura" name="altura" [(ngModel)]="altura">
+    <label for=""> m</label>
+    <br>
+    <br>
+
+    <label for="peso">Peso    </label>
+    <input type="text" id="peso" name="peso" [(ngModel)]="peso">
+    <label for=""> kg</label>
+    <br>
+    <br>
+
+    <button value="Calcular" class="btn" (click)="calcularImc()">Calcular</button>
+  </form>
+
+  <h2>Resultado</h2>
+  <p class = "resultado" id="resultado">{{ imc }}</p>
+  <p class = "diagnostico" id="diagnostico"> {{ diagnostico }} </p>
+  <div class="tabla">
+    <table>
+      <thead>
+        <th id = "f1"></th>
+        <th id = "f2"></th>
+        <th id = "f3"></th>
+        <th id = "f4"></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Peso bajo</td>
+          <td>Peso Normal</td>
+          <td>Sobrepeso</td>
+          <td>Obesidad</td>
+        </tr>
+        <tr>
+          <td>menos de 18</td>
+          <td>entre 18.5 y 24.9</td>
+          <td>entre 25 y 29.9</td>
+          <td>mas de 30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
