@@ -5,8 +5,8 @@
 
   <form action="">
 
-    <input type="radio" name="sexo" id="sexo" value="hombre"  [(ngModel)]="sexo">Hombre
-    <input type="radio" name="sexo" id="sexo" value="mujer"  [(ngModel)]="sexo">Mujer
+    <input type="radio" name="sexo" id="hombre" value="hombre"  [(ngModel)]="sexo">Hombre
+    <input type="radio" name="sexo" id="mujer" value="mujer"  [(ngModel)]="sexo">Mujer
     <br>
     <br>
 
@@ -27,7 +27,7 @@
     <br>
     <br>
 
-    <button value="Calcular" (click)="calcularImc()">Calcular</button>
+    <button value="Calcular" class="btn" (click)="calcularImc()">Calcular</button>
   </form>
 
   <h2>Resultado</h2>

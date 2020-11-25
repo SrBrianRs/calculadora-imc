@@ -27,12 +27,19 @@ export class CalculadoraUiComponent implements OnInit {
     if(this.peso !== null && this.altura !== null && this.sexo !== null && this.edad !== null){
 
       borraFlecha();
+      let result = 0;
 
       if(this.sexo === 'hombre'){
-        this.imc = calcularHombre(this.peso,this.altura);
+        result = calcularHombre(this.peso,this.altura);
+        console.log('entró a hombre');
       } else {
-        this.imc = calcularMujer(this.peso, this.altura);
+        result = calcularMujer(this.peso, this.altura);
       }
+      this.imc = result;
+      
+      console.log('resultado', result);
+
+      console.log('imc',this.imc);
 
       if( this.imc < 18.5){
         this.diagnostico = "Peso Bajo";
@@ -47,6 +54,8 @@ export class CalculadoraUiComponent implements OnInit {
         this.diagnostico = "Obesidad";
         document.querySelector('#f4').innerHTML = '&#8681'
       }
+
+    
       
     }
   }
